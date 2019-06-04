@@ -15,7 +15,7 @@ project 1 - A Random Quote Generator
   Use console.log() to log your array of quotes to the console.
 ***/
 
-
+var quotes = [ ];
 
 
 /***
