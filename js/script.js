@@ -15,7 +15,30 @@ project 1 - A Random Quote Generator
   Use console.log() to log your array of quotes to the console.
 ***/
 
-var quotes = [ ];
+var quotes = [ 
+  {
+    quote: " " , 
+    source: "Sun Tzu, The Art of War" 
+  },
+  {
+    quote: " " , 
+    source: "Sun Tzu, The Art of War" },
+  {
+    quote: " " ,
+    source: "Maya Angelo"  },
+  {
+    quote: " " ,
+    source: "Maya Angelo" },
+  {
+    quote: " " ,
+    source: "Les Brown" },
+  {
+    quote: " " ,
+    source: "Les Brown" }
+
+];
+ 
+console.log ()
 
 
 /***
