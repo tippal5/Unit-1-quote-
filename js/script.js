@@ -18,12 +18,12 @@ project 1 - A Random Quote Generator
 var quotes = [ 
   {
     quote: " Victorious warriors win first and then go to war, while defeated warriors go to war first and then seek to win. " , 
-    source: "Sun Tzu, The Art of War , Citation from the Art of War" 
+    source: "Sun Tzu, The Art of War , Citation from the Art of War", 
     citation: " The Art of War "
   },
   {
     quote: " Victory usually goes to the army who has better trained officers and men. " , 
-    source: "Sun Tzu, The Art of War , Year - 500 B.C." 
+    source: "Sun Tzu, The Art of War , Year - 500 B.C.", 
     year: "500 B.C."
   },
   {
@@ -51,7 +51,14 @@ console.log ()
    - Cse the random number to `return` a random quote object from the `quotes` array.
 ***/
 
-var getRandomQuote = [ quote ]
+function getRandomQuote ()
+{   
+  var randomNumber = Math.floor(Math.random()*quotes.length);
+      
+  return ( quotes[randomNumber]);
+} 
+
+
     
 
 
