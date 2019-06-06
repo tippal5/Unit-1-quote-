@@ -19,11 +19,13 @@ var quotes = [
   {
     quote: " Victorious warriors win first and then go to war, while defeated warriors go to war first and then seek to win. " , 
     source: "Sun Tzu, The Art of War , Citation from the Art of War", 
-    citation: " The Art of War "
+    citation: " The Art of War ",
+    year: "500"
   },
   {
     quote: " Victory usually goes to the army who has better trained officers and men. " , 
     source: "Sun Tzu, The Art of War , Year - 500 B.C.", 
+    citation: " The Art of War ",
     year: "500 B.C."
   },
   {
@@ -76,13 +78,35 @@ function getRandomQuote ()
    - Set the `innerHTML` of the `quote-box` div to the HTML string. 
 ***/
 
-function printQuote ()
-  var getRandomQuote = randomNumber(quotes);
-  var HTML 
+function printQuote () {
+  var randomQuote = getRandomQuote(quotes);
+  var htmlString = ""; 
+  htmlString +=  '<p class="quote"> ' + randomQuote.quote + ' </p>';
+  htmlString += '<p class="source"> ' + randomQuote.source ;
+   if (randomQuote.citation){
+  htmlString += '<p class="citation">' + randomQuote.citation;
+   }  if(randomQuote.year) {
+  htmlString += '<p class="year">' + randomQuote.year; '</p>'
+   }
+   
+
+   
+     
+  
+   // randomQuote.quote + randomQuote.source
+ 
+ 
+  
+  // <p class="quote">randomQuote.quote </p>
+  // <p class="source">randomQuote.source
+  // <span class="citation"></span>
+  // <span class="year"></span></p>
+console.log (htmlString);
+
+document.getElementById('quote-box').innerHTML=htmlString;
 
 
-
- alert=(getRandomQuote); 
+}  
 /***
   When the "Show another quote" button is clicked, the event listener 
   below will be triggered, and it will call, or "invoke", the `printQuote` 
