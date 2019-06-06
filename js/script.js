@@ -76,9 +76,13 @@ function getRandomQuote ()
    - Set the `innerHTML` of the `quote-box` div to the HTML string. 
 ***/
 
+function printQuote ()
+  var getRandomQuote = randomNumber(quotes);
+  var HTML 
 
 
 
+ alert=(getRandomQuote); 
 /***
   When the "Show another quote" button is clicked, the event listener 
   below will be triggered, and it will call, or "invoke", the `printQuote` 
