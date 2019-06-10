@@ -10,14 +10,13 @@ function randomc() {
   var b = Math.floor(Math.random() * 256);
   var c = Math.floor(Math.random() * 256);
   var bgColor = "rgb(" + a + "," + b + "," + c + ")";
-console.log(bgColor);
+// console.log(bgColor);
 
   document.body.style.background = bgColor;
   }
 
-randomc();
-randomc();
-setInterval(function(){ randomc() }, 27000);
+
+
 /*** 
  these are the first steps of adding var quotes to my .js file
 ***/
@@ -27,7 +26,7 @@ var quotes = [
     quote: " Victorious warriors win first and then go to war, while defeated warriors go to war first and then seek to win. " , 
     source: "Sun Tzu, The Art of War",  
     citation: " The Art of War ",
-    year: " 500 B.C. "
+    year: " 500 "
   },
   {
     quote: " Victory usually goes to the army who has better trained officers and men. " , 
@@ -38,8 +37,8 @@ var quotes = [
   {
     quote: " You may not control all the events that happen to you, but you can decide not to be reduced by them. " ,
     source: "Maya Angelo",   
-    tag: <a href="www.goalcast.com/2017/04/03/maya-angelou-quotes-to-inspire-your-life/"> " Inspirational " </a> 
-  }, //<a href="Http://WWW.stackoverflow.com">Link to the website opened in different tab</a>
+    tag: " Inspirational " 
+  },
   {
     quote: " You may not control all the events that happen to you, but you can decide not to be reduced by them. " ,
     source: "Maya Angelo", 
@@ -97,7 +96,7 @@ function printQuote ()
    htmlString += "<span class='tag'>" + randomQuote.tag + "</span>";
   htmlString += "</p>";
   document.getElementById('quote-box').innerHTML = htmlString;
-  
+  randomc(); 
 }
    
 
@@ -114,7 +113,7 @@ function printQuote ()
   // <span class="year"></span></p>
 //console.log (htmlString);
 printQuote();
-setInterval(function(){ printQuote() }, 27000);
+setInterval(printQuote, 20000);
 /***
   When the "Show another quote" button is clicked, the event listener 
   below will be triggered, and it will call, or "invoke", the `printQuote` 
