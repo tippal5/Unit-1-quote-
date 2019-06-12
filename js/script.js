@@ -1,16 +1,9 @@
-/******************************************
-Treehouse FSJS Techdegree:
-project 1 - A Random Quote Generator
-******************************************/
-
-// Study guide for this project - https://drive.google.com/file/d/1s5grutGuQFwJcQP8bFwEI69Q8FCkGdDk/view?usp=sharing
-
-function randomc() {
+// this is my random color generator code here. 
+function randomclr() {
   var a = Math.floor(Math.random() * 256);
   var b = Math.floor(Math.random() * 256);
   var c = Math.floor(Math.random() * 256);
   var bgColor = "rgb(" + a + "," + b + "," + c + ")";
-// console.log(bgColor);
 
   document.body.style.background = bgColor;
   }
@@ -91,40 +84,21 @@ function printQuote ()
   htmlString += "<span class='citation'>" + randomQuote.citation + "</span>";
    } 
     if (randomQuote.year) {
-  htmlString += "<span class='year'>" + randomQuote.year + "</span>";
-   }
+  htmlString += "<span class='year'>" +  randomQuote.year + "</span>";
+   }  if (randomQuote.tag) {
    htmlString += "<span class='tag'>" + randomQuote.tag + "</span>";
+   }
   htmlString += "</p>";
   document.getElementById('quote-box').innerHTML = htmlString;
-  randomc(); 
+  randomclr(); 
 }
    
 
    
      
   
-   // randomQuote.quote + randomQuote.source
- 
- 
-  
-  // <p class="quote">randomQuote.quote </p>
-  // <p class="source">randomQuote.source
-  // <span class="citation"></span>
-  // <span class="year"></span></p>
-//console.log (htmlString);
 printQuote();
 setInterval(printQuote, 20000);
-/***
-  When the "Show another quote" button is clicked, the event listener 
-  below will be triggered, and it will call, or "invoke", the `printQuote` 
-  function. So do not make any changes to the line of code below this 
-  comment.
-***/
+
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
-
-
-// Remember to delete the comments that came with this file, and replace them with your own code comments.
-
-//<p class="quote">Every great developer you know got there by solving problems they were unqualified to solve until they actually did it.</p>
-//<p class="source">Patrick McKenzie<span class="citation">Twitter</span><span class="year">2016</span></p>
